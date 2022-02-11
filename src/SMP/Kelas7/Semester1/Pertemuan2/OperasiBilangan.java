@@ -15,26 +15,89 @@ class OperasiBilangan {
         this.operator2 = operator2;
     }
 
-    void sayHasilOperasi(){
-        if (operator1.equals("+")){
-            if (operator2.equals("x")){
-                int kali = bilB * bilC;
-                int total = bilA + kali;
-                System.out.println("Hasil : "  + total);
-            }else if (operator2.equals("+")){
-                int total = bilA + bilB + bilC;
+    void sayHasilOperasi() {
+
+        int tambah;
+        int kurang;
+        int kali;
+        int bagi;
+        int total;
+
+        if (operator1.equals("+")) {
+            if (operator2.equals("x")) {
+                kali = bilB * bilC;
+                total = bilA + kali;
                 System.out.println("Hasil : " + total);
-            }else if (operator2.equals("/")){
-                int bagi = bilA + bilB;
-                int total = bilC + bagi;
+            } else if (operator2.equals("+")) {
+                total = bilA + bilB + bilC;
+                System.out.println("Hasil : " + total);
+            } else if (operator2.equals("/")) {
+                bagi = bilA + bilB;
+                total = bilC + bagi;
                 System.out.println("hasil : " + total);
-            }else if (operator2.equals("-")){
-                int total = bilA + bilB - bilC;
-                System.out.println("hasil : " + total );
+            } else if (operator2.equals("-")) {
+                total = bilA + bilB - bilC;
+                System.out.println("hasil : " + total);
+            } else {
+                System.out.println("Operator Tidak Ditemukan");
             }
-        }else {
-            System.out.println("code belum selesai");
+        } else if (operator1.equals("-")) {
+            if (operator2.equals("+")) {
+                kurang = bilA - bilB + bilC;
+                total = kurang;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("-")) {
+                kurang = bilA - bilB - bilC;
+                total = kurang;
+            } else if (operator2.equals("x")) {
+                kurang = bilB * bilC;
+                total = bilA - kurang;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("/")) {
+                kurang = bilA - bilB / bilC;
+                total = kurang;
+                System.out.println("hasil : " + total);
+            } else {
+                System.out.println("Operator Tidak Ditemukan");
+            }
+        } else if (operator1.equals("x")) {
+            if (operator2.equals("+")) {
+                kali = bilA * bilB + bilC;
+                total = kali;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("-")) {
+                kali = bilA - bilB - bilC;
+                total = kali;
+            } else if (operator2.equals("x")) {
+                kali = bilA * bilB * bilC;
+                total = kali;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("/")) {
+                kali = bilA * bilB / bilC;
+                total = kali;
+                System.out.println("hasil : " + total);
+            } else {
+                System.out.println("Operator Tidak Ditemukan");
+            }
+        } else if (operator1.equals("/")) {
+            if (operator2.equals("+")) {
+                bagi = bilA / bilB + bilC;
+                total = bagi;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("-")) {
+                bagi = bilA / bilB - bilC;
+                total = bagi;
+            } else if (operator2.equals("x")) {
+                bagi = bilA / bilB * bilC;
+                total = bagi;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("/")) {
+                bagi = bilA / bilB / bilC;
+                total = bagi;
+                System.out.println("hasil : " + total);
+            } else {
+                System.out.println("Operator Tidak Ditemukan");
+            }
         }
     }
-
 }
