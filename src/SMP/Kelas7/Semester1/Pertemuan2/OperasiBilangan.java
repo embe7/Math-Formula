@@ -24,7 +24,7 @@ class OperasiBilangan {
         int total;
 
         if (operator1.equals("+")) {
-            if (operator2.equals("x")) {
+            if (operator2.equals("*")) {
                 kali = bilB * bilC;
                 total = bilA + kali;
                 System.out.println("Hasil : " + total);
@@ -48,8 +48,9 @@ class OperasiBilangan {
                 System.out.println("hasil : " + total);
             } else if (operator2.equals("-")) {
                 kurang = bilA - bilB - bilC;
-                total = kurang;
-            } else if (operator2.equals("x")) {
+                total = kurang ;
+                System.out.println("hasil : " + total);
+            } else if (operator2.equals("*")) {
                 kurang = bilB * bilC;
                 total = bilA - kurang;
                 System.out.println("hasil : " + total);
@@ -60,15 +61,16 @@ class OperasiBilangan {
             } else {
                 System.out.println("Operator Tidak Ditemukan");
             }
-        } else if (operator1.equals("x")) {
+        } else if (operator1.equals("*")) {
             if (operator2.equals("+")) {
                 kali = bilA * bilB + bilC;
                 total = kali;
                 System.out.println("hasil : " + total);
             } else if (operator2.equals("-")) {
-                kali = bilA - bilB - bilC;
+                kali = bilA * bilB - bilC;
                 total = kali;
-            } else if (operator2.equals("x")) {
+                System.out.println("Hasil : " + total);
+            } else if (operator2.equals("*")) {
                 kali = bilA * bilB * bilC;
                 total = kali;
                 System.out.println("hasil : " + total);
@@ -87,7 +89,8 @@ class OperasiBilangan {
             } else if (operator2.equals("-")) {
                 bagi = bilA / bilB - bilC;
                 total = bagi;
-            } else if (operator2.equals("x")) {
+                System.out.println("Hasil : " + total);
+            } else if (operator2.equals("*")) {
                 bagi = bilA / bilB * bilC;
                 total = bagi;
                 System.out.println("hasil : " + total);
